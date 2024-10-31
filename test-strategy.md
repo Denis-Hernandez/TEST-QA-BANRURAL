@@ -80,7 +80,7 @@ guessField permite ingresar valores no numericos
 <label for="guessField">Ingresa el número a adivinar: </label><input type="text" id="guessField" class="guessField">
 ```
 
-## Color de Mensajer es incorrecto
+## Color de Mensaje es incorrecto
 El mensaje de numero incorrecto aparece de color verde cuando debe de ser negro, mientras que el mensaje de numero correcto aparece negro mientras que debe de ser verde
 
 * Linea 66:
@@ -136,7 +136,7 @@ function checkGuess() {
 }
 ```
 
-## El valor de guessField no es Convertido a entero
+## Comparacion de userGuess y randomNumber hace una validacion adicional
 La comparacion userGuess === randomNumber hace una comparacion adicional de tipo de dato, al extraer el valor ingresado por el usuario, este se extrae como un valor del tipo String, se recomienta hacer un parseInt a userGuess o reducir la calidacion a == para que javascript no compare el tipo de dato.
 
 * Linea 64:
