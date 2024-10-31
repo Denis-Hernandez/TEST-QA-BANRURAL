@@ -56,7 +56,7 @@ Al imprimir en consola la variable randomNumber se visualiza que el numero no es
 ## guessField permite ingresar valores no Enteros
 El campo guessField permite ingresar cadenas de texto y valores decimales, se recomenda cambiar el tipo de input a Number y agregar un script que no permita el ingreso de este tipo de valores
 
-* Linea 31: <input type="text" id="guessField" class="guessField">
+* Linea 31:  ``` javascript<input type="text" id="guessField" class="guessField"> ```
 * correccion: <input type="number" min="1" max="100" id="guessField" class="guessField" oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = Math.min(Math.max(this.value, 1), 100);">
 
 ## guessField permite ingresar valores vacios
@@ -69,3 +69,9 @@ function checkGuess() {
     }
 }
 ```
+
+## El valor de guessField no es Convertido a entero
+La comparacion userGuess === randomNumber hace una comparacion adicional de tipo de dato, al extraer el valor ingresado por el usuario, este se extrae como un valor del tipo String, se recomienta hacer un parseInt a userGuess o reducir la calidacion a == para que javascript no compare el tipo de dato.
+
+* Linea 64: if(userGuess === randomNumber)
+* Correccion: if(userGuess == randomNumber) o if(parseInt(userGuess) == randomNumber)
