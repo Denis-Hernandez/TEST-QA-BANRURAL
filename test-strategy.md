@@ -73,5 +73,7 @@ function checkGuess() {
 ## El valor de guessField no es Convertido a entero
 La comparacion userGuess === randomNumber hace una comparacion adicional de tipo de dato, al extraer el valor ingresado por el usuario, este se extrae como un valor del tipo String, se recomienta hacer un parseInt a userGuess o reducir la calidacion a == para que javascript no compare el tipo de dato.
 
-* Linea 64: if(userGuess === randomNumber)
-* Correccion: if(userGuess == randomNumber) o if(parseInt(userGuess) == randomNumber)
+* Linea 64:
+    -```javascript if(userGuess === randomNumber) ```
+* Correccion:
+    -```javascript if(userGuess == randomNumber) ``` o ```if(parseInt(userGuess) == randomNumber) ```
